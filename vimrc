@@ -83,6 +83,17 @@ let NERDTreeMapOpenSplit=""
 " ===
 inoremap { {}<left><CR><up><right><CR>
 
+" ===
+" === (
+" ===
+inoremap ( ()<left>
+inoremap () ()
+
+inoremap {} {}
+
+inoremap " ""<left>
+
+inoremap [ []<left>
 
 
 
@@ -104,18 +115,24 @@ call plug#begin()
 
 Plug 'vim-airline/vim-airline'
 Plug 'connorholyday/vim-snazzy'
+Plug 'whatyouhide/vim-gotham'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'preservim/nerdtree'
 
 Plug 'SirVer/ultisnips'
 
 Plug 'honza/vim-snippets'
+ Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
 "snazzy
 colorscheme snazzy
 
+
+let g:lightline = {
+\ 'colorscheme': 'snazzy',
+\ }
 
 
 
